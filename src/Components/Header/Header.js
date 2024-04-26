@@ -6,7 +6,7 @@ import Search from '../../assets/Search';
 import Arrow from '../../assets/Arrow';
 import SellButton from '../../assets/SellButton';
 import SellButtonPlus from '../../assets/SellButtonPlus';
-import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { Link, useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 function Header() {
 
   const { user } = useContext(AuthContext)
@@ -50,13 +50,13 @@ function Header() {
         </div>
         {user && <span onClick={logout} >LogOut</span>}
 
-        <div className="sellMenu">
+        <Link to={'/create'}><div className="sellMenu">
           <SellButton></SellButton>
           <div className="sellMenuContent">
             <SellButtonPlus></SellButtonPlus>
             <span>SELL</span>
           </div>
-        </div>
+        </div></Link>
       </div>
     </div>
   );
