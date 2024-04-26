@@ -45,7 +45,8 @@ function Header() {
           <Arrow></Arrow>
         </div>
         <div className="loginPage">
-          <span>{user ? `welcome ${user.displayName}` : 'Login'}</span>
+          <span>{user && `welcome ${user.displayName}` }</span>
+          <Link to='/login'><span>{!user && "Login" }</span></Link>
           <hr />
         </div>
         {user && <span onClick={logout} >LogOut</span>}
