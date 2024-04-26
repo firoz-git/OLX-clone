@@ -21,9 +21,9 @@ function Header() {
   return (
     <div className="headerParentDiv">
       <div className="headerChildDiv">
-        <div className="brandName">
+        <Link to='/' ><div className="brandName">
           <OlxLogo></OlxLogo>
-        </div>
+        </div></Link>
         <div className="placeSearch">
           <Search></Search>
           <input type="text" />
